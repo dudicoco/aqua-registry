@@ -23742,6 +23742,235 @@ packages:
           - goos: windows
             asset: gleam-{{.Version}}-windows-64bit.{{.Format}}
             format: zip
+  - type: http
+    repo_owner: gnu.org
+    repo_name: coreutils
+    url: https://dist.pkgx.dev/gnu.org/coreutils/{{.OS}}/{{.Arch}}/{{.Version}}.tar.gz
+    description: Basic file, shell and text manipulation utilities
+    replacements:
+      amd64: x86-64
+      arm64: aarch64
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+      - arm64
+    # checksum:
+    #   type: http
+    #   url: https://dist.pkgx.dev/gnu.org/coreutils/{{.OS}}/{{.Arch}}/{{.Version}}.tar.gz.sha256sum
+    #   algorithm: sha256
+    files:
+      - name: '['
+        src: gnu.org/coreutils/{{.Version}}/bin/[
+      - name: b2sum
+        src: gnu.org/coreutils/{{.Version}}/bin/b2sum
+      - name: base32
+        src: gnu.org/coreutils/{{.Version}}/bin/base32
+      - name: base64
+        src: gnu.org/coreutils/{{.Version}}/bin/base64
+      - name: basename
+        src: gnu.org/coreutils/{{.Version}}/bin/basename
+      - name: basenc
+        src: gnu.org/coreutils/{{.Version}}/bin/basenc
+      - name: cat
+        src: gnu.org/coreutils/{{.Version}}/bin/cat
+      - name: chcon
+        src: gnu.org/coreutils/{{.Version}}/bin/chcon
+      - name: chgrp
+        src: gnu.org/coreutils/{{.Version}}/bin/chgrp
+      - name: chmod
+        src: gnu.org/coreutils/{{.Version}}/bin/chmod
+      - name: chown
+        src: gnu.org/coreutils/{{.Version}}/bin/chown
+      - name: chroot
+        src: gnu.org/coreutils/{{.Version}}/bin/chroot
+      - name: cksum
+        src: gnu.org/coreutils/{{.Version}}/bin/cksum
+      - name: comm
+        src: gnu.org/coreutils/{{.Version}}/bin/comm
+      - name: cp
+        src: gnu.org/coreutils/{{.Version}}/bin/cp
+      - name: csplit
+        src: gnu.org/coreutils/{{.Version}}/bin/csplit
+      - name: cut
+        src: gnu.org/coreutils/{{.Version}}/bin/cut
+      - name: date
+        src: gnu.org/coreutils/{{.Version}}/bin/date
+      - name: dd
+        src: gnu.org/coreutils/{{.Version}}/bin/dd
+      - name: df
+        src: gnu.org/coreutils/{{.Version}}/bin/df
+      - name: dir
+        src: gnu.org/coreutils/{{.Version}}/bin/dir
+      - name: dircolors
+        src: gnu.org/coreutils/{{.Version}}/bin/dircolors
+      - name: dirname
+        src: gnu.org/coreutils/{{.Version}}/bin/dirname
+      - name: du
+        src: gnu.org/coreutils/{{.Version}}/bin/du
+      - name: echo
+        src: gnu.org/coreutils/{{.Version}}/bin/echo
+      - name: env
+        src: gnu.org/coreutils/{{.Version}}/bin/env
+      - name: expand
+        src: gnu.org/coreutils/{{.Version}}/bin/expand
+      - name: expr
+        src: gnu.org/coreutils/{{.Version}}/bin/expr
+      - name: factor
+        src: gnu.org/coreutils/{{.Version}}/bin/factor
+      - name: 'false'
+        src: gnu.org/coreutils/{{.Version}}/bin/false
+      - name: fmt
+        src: gnu.org/coreutils/{{.Version}}/bin/fmt
+      - name: fold
+        src: gnu.org/coreutils/{{.Version}}/bin/fold
+      - name: groups
+        src: gnu.org/coreutils/{{.Version}}/bin/groups
+      - name: head
+        src: gnu.org/coreutils/{{.Version}}/bin/head
+      - name: hostid
+        src: gnu.org/coreutils/{{.Version}}/bin/hostid
+      - name: id
+        src: gnu.org/coreutils/{{.Version}}/bin/id
+      - name: install
+        src: gnu.org/coreutils/{{.Version}}/bin/install
+      - name: join
+        src: gnu.org/coreutils/{{.Version}}/bin/join
+      - name: kill
+        src: gnu.org/coreutils/{{.Version}}/bin/kill
+      - name: link
+        src: gnu.org/coreutils/{{.Version}}/bin/link
+      - name: ln
+        src: gnu.org/coreutils/{{.Version}}/bin/ln
+      - name: logname
+        src: gnu.org/coreutils/{{.Version}}/bin/logname
+      - name: ls
+        src: gnu.org/coreutils/{{.Version}}/bin/ls
+      - name: md5sum
+        src: gnu.org/coreutils/{{.Version}}/bin/md5sum
+      - name: mkdir
+        src: gnu.org/coreutils/{{.Version}}/bin/mkdir
+      - name: mkfifo
+        src: gnu.org/coreutils/{{.Version}}/bin/mkfifo
+      - name: mknod
+        src: gnu.org/coreutils/{{.Version}}/bin/mknod
+      - name: mktemp
+        src: gnu.org/coreutils/{{.Version}}/bin/mktemp
+      - name: mv
+        src: gnu.org/coreutils/{{.Version}}/bin/mv
+      - name: nice
+        src: gnu.org/coreutils/{{.Version}}/bin/nice
+      - name: nl
+        src: gnu.org/coreutils/{{.Version}}/bin/nl
+      - name: nohup
+        src: gnu.org/coreutils/{{.Version}}/bin/nohup
+      - name: nproc
+        src: gnu.org/coreutils/{{.Version}}/bin/nproc
+      - name: numfmt
+        src: gnu.org/coreutils/{{.Version}}/bin/numfmt
+      - name: od
+        src: gnu.org/coreutils/{{.Version}}/bin/od
+      - name: paste
+        src: gnu.org/coreutils/{{.Version}}/bin/paste
+      - name: pathchk
+        src: gnu.org/coreutils/{{.Version}}/bin/pathchk
+      - name: pinky
+        src: gnu.org/coreutils/{{.Version}}/bin/pinky
+      - name: pr
+        src: gnu.org/coreutils/{{.Version}}/bin/pr
+      - name: printenv
+        src: gnu.org/coreutils/{{.Version}}/bin/printenv
+      - name: printf
+        src: gnu.org/coreutils/{{.Version}}/bin/printf
+      - name: ptx
+        src: gnu.org/coreutils/{{.Version}}/bin/ptx
+      - name: pwd
+        src: gnu.org/coreutils/{{.Version}}/bin/pwd
+      - name: readlink
+        src: gnu.org/coreutils/{{.Version}}/bin/readlink
+      - name: realpath
+        src: gnu.org/coreutils/{{.Version}}/bin/realpath
+      - name: rm
+        src: gnu.org/coreutils/{{.Version}}/bin/rm
+      - name: rmdir
+        src: gnu.org/coreutils/{{.Version}}/bin/rmdir
+      - name: runcon
+        src: gnu.org/coreutils/{{.Version}}/bin/runcon
+      - name: seq
+        src: gnu.org/coreutils/{{.Version}}/bin/seq
+      - name: sha1sum
+        src: gnu.org/coreutils/{{.Version}}/bin/sha1sum
+      - name: sha224sum
+        src: gnu.org/coreutils/{{.Version}}/bin/sha224sum
+      - name: sha256sum
+        src: gnu.org/coreutils/{{.Version}}/bin/sha256sum
+      - name: sha384sum
+        src: gnu.org/coreutils/{{.Version}}/bin/sha384sum
+      - name: sha512sum
+        src: gnu.org/coreutils/{{.Version}}/bin/sha512sum
+      - name: shred
+        src: gnu.org/coreutils/{{.Version}}/bin/shred
+      - name: shuf
+        src: gnu.org/coreutils/{{.Version}}/bin/shuf
+      - name: sleep
+        src: gnu.org/coreutils/{{.Version}}/bin/sleep
+      - name: sort
+        src: gnu.org/coreutils/{{.Version}}/bin/sort
+      - name: split
+        src: gnu.org/coreutils/{{.Version}}/bin/split
+      - name: stat
+        src: gnu.org/coreutils/{{.Version}}/bin/stat
+      - name: stty
+        src: gnu.org/coreutils/{{.Version}}/bin/stty
+      - name: sum
+        src: gnu.org/coreutils/{{.Version}}/bin/sum
+      - name: sync
+        src: gnu.org/coreutils/{{.Version}}/bin/sync
+      - name: tac
+        src: gnu.org/coreutils/{{.Version}}/bin/tac
+      - name: tail
+        src: gnu.org/coreutils/{{.Version}}/bin/tail
+      - name: tee
+        src: gnu.org/coreutils/{{.Version}}/bin/tee
+      - name: test
+        src: gnu.org/coreutils/{{.Version}}/bin/test
+      - name: timeout
+        src: gnu.org/coreutils/{{.Version}}/bin/timeout
+      - name: touch
+        src: gnu.org/coreutils/{{.Version}}/bin/touch
+      - name: tr
+        src: gnu.org/coreutils/{{.Version}}/bin/tr
+      - name: 'true'
+        src: gnu.org/coreutils/{{.Version}}/bin/true
+      - name: truncate
+        src: gnu.org/coreutils/{{.Version}}/bin/truncate
+      - name: tsort
+        src: gnu.org/coreutils/{{.Version}}/bin/tsort
+      - name: tty
+        src: gnu.org/coreutils/{{.Version}}/bin/tty
+      - name: uname
+        src: gnu.org/coreutils/{{.Version}}/bin/uname
+      - name: unexpand
+        src: gnu.org/coreutils/{{.Version}}/bin/unexpand
+      - name: uniq
+        src: gnu.org/coreutils/{{.Version}}/bin/uniq
+      - name: unlink
+        src: gnu.org/coreutils/{{.Version}}/bin/unlink
+      - name: uptime
+        src: gnu.org/coreutils/{{.Version}}/bin/uptime
+      - name: users
+        src: gnu.org/coreutils/{{.Version}}/bin/users
+      - name: vdir
+        src: gnu.org/coreutils/{{.Version}}/bin/vdir
+      - name: wc
+        src: gnu.org/coreutils/{{.Version}}/bin/wc
+      - name: who
+        src: gnu.org/coreutils/{{.Version}}/bin/who
+      - name: whoami
+        src: gnu.org/coreutils/{{.Version}}/bin/whoami
+      - name: yes
+        src: gnu.org/coreutils/{{.Version}}/bin/yes
+    version_constraint: false
   - type: github_release
     repo_owner: go-acme
     repo_name: lego
